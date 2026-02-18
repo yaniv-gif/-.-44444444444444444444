@@ -2,10 +2,10 @@ import React from 'react';
 
 const TrustBar: React.FC = () => {
   const stats = [
-    { value: "5.0", label: "דירוג בגוגל" },
-    { value: "10+", label: "שנות ניסיון" },
-    { value: "05", label: "שנות אחריות" },
-    { value: "500+", label: "פרויקטים" },
+    { value: "5.0", label: "בגוגל (ביקורות מאומתות)" },
+    { value: "10+", label: "שנות ניסיון בשטח" },
+    { value: "5", label: "שנות אחריות בכתב" },
+    { value: "500+", label: "פרויקטים שהושלמו" },
   ];
 
   return (

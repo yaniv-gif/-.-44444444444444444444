@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { ChevronsLeftRight, Sparkles } from 'lucide-react';
 
 const BeforeAfter: React.FC = () => {
+  const sliderRef = useRef<HTMLInputElement>(null);
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -38,7 +39,7 @@ const BeforeAfter: React.FC = () => {
         <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-1 rounded-full mb-4 backdrop-blur-sm border border-white/10">
              <Sparkles className="w-4 h-4 text-timber-accent" />
-             <span className="text-xs font-bold uppercase tracking-widest text-timber-accent">The Transformation</span>
+             <span className="text-xs font-bold uppercase tracking-widest text-timber-accent">לפני / אחרי</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">
             ההבדל שיום עבודה אחד עושה.

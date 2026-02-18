@@ -34,7 +34,7 @@ const Gallery: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
           <div>
-             <span className="text-gray-500 font-bold tracking-[0.2em] text-xs uppercase mb-2 block">Portfolio</span>
+             <span className="text-gray-500 font-bold tracking-[0.2em] text-xs uppercase mb-2 block">עבודות אמיתיות</span>
              <h2 className="text-4xl font-black tracking-tight">פרויקטים נבחרים</h2>
           </div>
           <a 

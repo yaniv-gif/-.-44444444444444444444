@@ -37,7 +37,7 @@ const Process: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
           <div className="max-w-2xl">
             <span className="text-timber-accent font-bold tracking-widest text-xs uppercase mb-3 block">
-              The Workflow
+              איך זה עובד
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-timber-black leading-tight">
               שקט נפשי.<br/>

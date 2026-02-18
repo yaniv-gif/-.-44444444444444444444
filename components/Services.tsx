@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Camera } from 'lucide-react';
+import { ArrowLeft, MessageCircle } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -58,7 +58,7 @@ const Services: React.FC = () => {
             const heightClass = index < 3 ? "aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5]" : "aspect-[16/9] md:aspect-[21/9]";
             
             return (
-              <div key={index} className={`group cursor-pointer flex flex-col h-full bg-gray-50 border border-gray-200 hover:border-black transition-colors duration-300 ${colSpanClass}`}>
+              <div key={index} className={`group flex flex-col h-full bg-gray-50 border border-gray-200 hover:border-black transition-colors duration-300 ${colSpanClass}`}>
                 <div className={`${heightClass} w-full overflow-hidden relative`}>
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10 duration-500"></div>
                   <img 
@@ -69,7 +69,7 @@ const Services: React.FC = () => {
                 </div>
                 
                 <div className="flex flex-col flex-grow p-6 md:p-8">
-                  <div className="mb-4">
+                  <div className="mb-4 flex-grow">
                     <h3 className="text-2xl font-bold text-timber-black mb-1">{service.title}</h3>
                     <p className="text-xs font-bold text-timber-accent uppercase tracking-wider mb-3">
                       {service.subtitle}
@@ -78,6 +78,15 @@ const Services: React.FC = () => {
                       {service.desc}
                     </p>
                   </div>
+                  <a 
+                    href={`https://wa.me/972543962871?text=${encodeURIComponent(`היי ג'ריקו, אשמח לקבל הצעת מחיר עבור ${service.title}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto w-full flex items-center justify-between bg-white border border-gray-200 px-4 py-3 text-sm font-bold text-timber-black hover:bg-timber-black hover:text-white hover:border-timber-black transition-all group-hover:shadow-md"
+                  >
+                    <span>בקש הצעת מחיר</span>
+                    <MessageCircle className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             );

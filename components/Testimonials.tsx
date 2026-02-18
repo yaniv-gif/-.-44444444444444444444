@@ -9,7 +9,7 @@ const Testimonials: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-timber-accent font-bold tracking-widest text-xs uppercase mb-3 block">
-            Verified Reviews
+            ביקורות מאומתות
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-timber-black">
             אל תקשיבו רק לי.
@@ -58,18 +58,16 @@ const Testimonials: React.FC = () => {
                 <div className="w-8 h-8 rounded-full bg-gray-300 border border-white/30"></div>
                 <div className="text-xs">
                    <p className="font-bold">ג'ריקו אספינוזה</p>
-                   <p className="opacity-80">נראה לאחרונה היום ב-08:30</p>
+                   <p className="opacity-80">זמין בוואטסאפ</p>
                 </div>
              </div>
 
              <div className="space-y-3 text-xs font-sans relative z-10">
                 <div className="bg-white p-3 rounded-lg rounded-tr-none shadow-sm self-start mr-8 relative">
                    <p dir="rtl">ג'ריקו בוקר טוב! רק רציתי להגיד תודה ענקית.</p>
-                   <span className="text-[9px] text-gray-400 absolute bottom-1 left-2">09:15</span>
                 </div>
                 <div className="bg-white p-3 rounded-lg rounded-tr-none shadow-sm self-start mr-8 relative">
                    <p dir="rtl">נכנסנו הבוקר למשרד והדק במרפסת נראה חדש לגמרי. לא האמנתי שאפשר להציל אותו.</p>
-                   <span className="text-[9px] text-gray-400 absolute bottom-1 left-2">09:16</span>
                 </div>
                 <div className="bg-[#dcf8c6] p-3 rounded-lg rounded-tl-none shadow-sm self-end ml-8 relative">
                    <p dir="rtl">איזה כיף לשמוע! תתחדשו חברים 🙏</p>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Loader2, ArrowLeft, ChevronDown, ShieldCheck } from 'lucide-react';
+import { Loader2, ArrowLeft, ChevronDown, ShieldCheck, Send } from 'lucide-react';
 
 const LeadForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -30,13 +30,15 @@ const LeadForm: React.FC = () => {
       `\nעיר: ${formData.city}` +
       `\nשירות: ${formData.serviceType}`;
 
-    window.open(
-      `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${encodeURIComponent(text)}`,
-      '_blank',
-      'noopener,noreferrer'
-    );
-
-    setStatus('success');
+    // Simulate delay for effect, then open WhatsApp
+    setTimeout(() => {
+        window.open(
+        `https://wa.me/${WHATSAPP_NUMBER_E164}?text=${encodeURIComponent(text)}`,
+        '_blank',
+        'noopener,noreferrer'
+        );
+        setStatus('success');
+    }, 1000);
   };
 
   return (
@@ -46,19 +48,28 @@ const LeadForm: React.FC = () => {
         {/* Form Side */}
         <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center order-2 md:order-1">
           <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
-            קבלו הצעת מחיר סופית (בלי הפתעות) תוך שעה.
+            הצעת מחיר סופית (בלי הפתעות) — אחרי תמונה ומדידה.
           </h2>
           <p className="text-gray-400 font-light mb-12">
-            השאירו פרטים ואחזור אליכם עם הצעה מדויקת. הטלפון שלכם שמור אצלי בלבד.
+            השאירו פרטים ואפתח לכם חלון וואטסאפ עם הודעה מוכנה. לאחר השליחה, אחזור אליכם באותו יום עסקים.
           </p>
           
           {status === 'success' ? (
-            <div className="bg-white/5 p-8 border border-white/10 text-center animate-fade-in">
-              <h3 className="text-2xl font-bold mb-4">תודה רבה.</h3>
-              <p className="text-gray-400 font-light">הפרטים התקבלו — ג'ריקו יחזור אליך תוך מספר שעות.</p>
-              <a href="https://wa.me/972543962871" className="inline-block mt-8 text-sm font-bold text-timber-accent border-b border-timber-accent pb-1">
-                רוצים תשובה עוד יותר מהירה? שלחו תמונה בוואטסאפ →
-              </a>
+            <div className="bg-[#075E54]/20 p-8 border border-[#25D366]/30 rounded-xl text-center animate-fade-in relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-[#25D366]"></div>
+              <div className="flex justify-center mb-4">
+                 <div className="bg-[#25D366] p-3 rounded-full">
+                    <Send className="w-6 h-6 text-white" />
+                 </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-2 text-white">ההודעה מוכנה לשליחה</h3>
+              <p className="text-gray-300 font-light mb-6">
+                חלון הוואטסאפ נפתח אצלכם. <br/>
+                <strong className="text-white font-bold">אנא לחצו על כפתור ה'שליחה' (Send) בוואטסאפ</strong> כדי שאקבל את הפרטים.
+              </p>
+              <button onClick={() => setStatus('idle')} className="text-sm font-bold text-gray-400 hover:text-white underline">
+                שלחתי, חזרה לאתר
+              </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-10">
@@ -102,14 +113,13 @@ const LeadForm: React.FC = () => {
                       type="text" 
                       id="lead-city"
                       name="city" 
-                      /* Removed required attribute for better conversion */
                       placeholder=" "
                       className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-timber-accent focus:ring-0 peer placeholder-transparent transition-colors"
                       value={formData.city}
                       onChange={handleChange}
                     />
                      <label htmlFor="lead-city" className="absolute right-0 top-4 text-gray-500 text-sm font-bold uppercase tracking-wider duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[100%_0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-timber-accent pointer-events-none">
-                      עיר מגורים (אופציונלי)
+                      עיר מגורים
                     </label>
                   </div>
                   <div className="relative group">
@@ -146,7 +156,7 @@ const LeadForm: React.FC = () => {
                   <Loader2 className="w-5 h-5 animate-spin" />
                 ) : (
                   <>
-                    דברו איתי <ArrowLeft className="w-4 h-4" />
+                    המשך לוואטסאפ <ArrowLeft className="w-4 h-4" />
                   </>
                 )}
               </button>
@@ -154,11 +164,8 @@ const LeadForm: React.FC = () => {
               <div className="text-center mt-6 space-y-4">
                  <p className="text-xs text-gray-500 flex items-center justify-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-timber-accent" />
-                    התחייבות 0% ספאם. המספר שלך נשאר אצלי.
+                    המספר שלך נשאר אצלי בלבד.
                  </p>
-                 <a href="https://wa.me/972543962871" className="block text-xs text-gray-400 hover:text-white transition-colors border-b border-transparent hover:border-gray-500 pb-0.5 w-fit mx-auto">
-                   רוצים תשובה מהירה יותר? → שלחו הודעה בוואטסאפ
-                 </a>
               </div>
             </form>
           )}
