@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Loader2, ArrowLeft, ChevronDown } from 'lucide-react';
+import { Loader2, ArrowLeft, ChevronDown, ShieldCheck } from 'lucide-react';
 
 const LeadForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -102,14 +102,14 @@ const LeadForm: React.FC = () => {
                       type="text" 
                       id="lead-city"
                       name="city" 
-                      required
+                      /* Removed required attribute for better conversion */
                       placeholder=" "
                       className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-timber-accent focus:ring-0 peer placeholder-transparent transition-colors"
                       value={formData.city}
                       onChange={handleChange}
                     />
                      <label htmlFor="lead-city" className="absolute right-0 top-4 text-gray-500 text-sm font-bold uppercase tracking-wider duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[100%_0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-timber-accent pointer-events-none">
-                      עיר מגורים
+                      עיר מגורים (אופציונלי)
                     </label>
                   </div>
                   <div className="relative group">
@@ -151,8 +151,12 @@ const LeadForm: React.FC = () => {
                 )}
               </button>
               
-              <div className="text-center">
-                 <a href="https://wa.me/972543962871" className="text-xs text-gray-500 hover:text-white transition-colors border-b border-transparent hover:border-gray-500 pb-0.5">
+              <div className="text-center mt-6 space-y-4">
+                 <p className="text-xs text-gray-500 flex items-center justify-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-timber-accent" />
+                    התחייבות 0% ספאם. המספר שלך נשאר אצלי.
+                 </p>
+                 <a href="https://wa.me/972543962871" className="block text-xs text-gray-400 hover:text-white transition-colors border-b border-transparent hover:border-gray-500 pb-0.5 w-fit mx-auto">
                    רוצים תשובה מהירה יותר? → שלחו הודעה בוואטסאפ
                  </a>
               </div>
