@@ -33,22 +33,14 @@ const Gallery: React.FC = () => {
     <section id="gallery" className="py-24 bg-[#1A1A1A] text-white">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-          <div>
+          <div className="reveal">
              <span className="text-gray-500 font-bold tracking-[0.2em] text-xs uppercase mb-2 block">עבודות אמיתיות</span>
              <h2 className="text-4xl font-black tracking-tight">פרויקטים נבחרים</h2>
           </div>
-          {/* Link updated to be a placeholder or specific account when available */}
-          <a 
-            href="#" 
-            onClick={(e) => e.preventDefault()}
-            className="hidden md:flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-timber-accent transition-colors cursor-not-allowed opacity-50"
-          >
-            <Instagram className="w-4 h-4" />
-            בקרוב: עקבו באינסטגרם
-          </a>
+          {/* Instagram link removed until profile is live */}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[600px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[600px] reveal delay-200">
           {projects.map((project, index) => (
             <div key={index} className={`relative group overflow-hidden rounded-xl bg-gray-900 ${project.size}`}>
               {/* Image */}

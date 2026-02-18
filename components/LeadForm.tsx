@@ -46,7 +46,7 @@ const LeadForm: React.FC = () => {
       <div className="flex flex-col md:flex-row min-h-[800px]">
         
         {/* Form Side */}
-        <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center order-2 md:order-1">
+        <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center order-2 md:order-1 reveal">
           
           <div className="mb-8">
             <span className="inline-block bg-white/10 px-3 py-1 rounded text-xs font-bold text-timber-accent mb-4 border border-white/10">

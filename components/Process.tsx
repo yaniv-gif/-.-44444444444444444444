@@ -34,7 +34,7 @@ const Process: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6 reveal">
           <div className="max-w-2xl">
             <span className="text-timber-accent font-bold tracking-widest text-xs uppercase mb-3 block">
               איך זה עובד
@@ -62,7 +62,7 @@ const Process: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
             {steps.map((step, index) => (
-              <div key={index} className="relative flex flex-col md:items-center md:text-center group">
+              <div key={index} className={`relative flex flex-col md:items-center md:text-center group reveal delay-${(index + 1) * 100}`}>
                 
                 {/* Mobile Connector (Vertical) */}
                 {index !== steps.length - 1 && (

@@ -40,7 +40,7 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12">
         
         {/* Header without English */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-8 border-b border-black pb-4 mt-6 md:mt-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-8 border-b border-black pb-4 mt-6 md:mt-8 reveal">
           <div>
             <h2 className="text-5xl md:text-7xl font-black text-timber-black tracking-tight">
               השירותים
@@ -52,7 +52,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 reveal delay-100">
           {services.map((service, index) => {
             const colSpanClass = index < 3 ? "lg:col-span-2" : "lg:col-span-3";
             const heightClass = index < 3 ? "aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5]" : "aspect-[16/9] md:aspect-[21/9]";

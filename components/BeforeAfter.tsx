@@ -35,7 +35,7 @@ const BeforeAfter: React.FC = () => {
       {/* Grid Pattern Background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 reveal">
         <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-1 rounded-full mb-4 backdrop-blur-sm border border-white/10">
              <Sparkles className="w-4 h-4 text-timber-accent" />

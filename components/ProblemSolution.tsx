@@ -15,7 +15,7 @@ const ProblemSolution: React.FC = () => {
         </div>
 
         {/* Text Side - Story */}
-        <div className="flex flex-col justify-center px-8 py-16 md:px-24 md:py-24 bg-timber-black text-white order-2 md:order-1">
+        <div className="flex flex-col justify-center px-8 py-16 md:px-24 md:py-24 bg-timber-black text-white order-2 md:order-1 reveal">
           <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight tracking-tight">
             אני ג׳ריקו.<br/>
             לא "צוות". לא "מנהל עבודה".

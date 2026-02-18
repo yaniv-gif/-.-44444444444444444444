@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 
 const InterruptCTA: React.FC = () => {
   return (
-    <section className="bg-timber-accent py-12 text-center px-6 relative z-20">
+    <section className="bg-timber-accent py-12 text-center px-6 relative z-20 reveal">
       <div className="container mx-auto">
         <p className="text-timber-black font-black text-2xl md:text-3xl mb-4 tracking-tight">
           רצפה שרציתם? בואו נדבר.

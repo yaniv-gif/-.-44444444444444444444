@@ -13,7 +13,7 @@ const Partners: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 bg-white border-b border-gray-100 overflow-hidden relative">
+    <section className="py-12 bg-white border-b border-gray-100 overflow-hidden relative reveal">
       <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">עובד עם חומרים מן המותגים המובילים</p>
       
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>

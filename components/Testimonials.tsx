@@ -7,7 +7,7 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12">
         
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 reveal">
           <span className="text-timber-accent font-bold tracking-widest text-xs uppercase mb-3 block">
             ביקורות מאומתות
           </span>
@@ -26,7 +26,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto reveal delay-200">
           
           {/* Card 1: Main Text Review */}
           <div className="md:col-span-2 bg-gray-50 p-8 rounded-3xl border border-gray-100">
