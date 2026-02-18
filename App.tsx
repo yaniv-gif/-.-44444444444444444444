@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Marquee from './components/Marquee';
 import TrustBar from './components/TrustBar';
 import ProblemSolution from './components/ProblemSolution';
 import Services from './components/Services';
@@ -8,6 +9,7 @@ import BeforeAfter from './components/BeforeAfter';
 import Gallery from './components/Gallery';
 import Process from './components/Process';
 import Guarantee from './components/Guarantee';
+import Testimonials from './components/Testimonials';
 import Partners from './components/Partners';
 import LeadForm from './components/LeadForm';
 import FAQ from './components/FAQ';
@@ -42,6 +44,7 @@ const App: React.FC = () => {
       <main className="flex-grow">
         <Hero />
         <TrustBar />
+        <Marquee />
         <div id="services">
           <Services />
         </div>
@@ -53,6 +56,7 @@ const App: React.FC = () => {
           <Process />
         </div>
         <Guarantee />
+        <Testimonials />
         <LeadForm />
         <div id="faq">
           <FAQ />

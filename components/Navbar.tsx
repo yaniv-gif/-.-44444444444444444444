@@ -67,11 +67,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:block">
            <button 
              onClick={() => scrollToSection('contact-form')}
-             className={`px-6 py-3 text-sm font-bold border transition-all duration-300 ${
-               isScrolled 
-                 ? 'border-black text-black hover:bg-black hover:text-white' 
-                 : 'border-white text-white hover:bg-white hover:text-black'
-             }`}
+             className={`px-6 py-3 text-sm font-bold border transition-all duration-300 bg-timber-accent text-timber-black border-timber-accent hover:bg-white hover:border-white`}
            >
              הצעת מחיר
            </button>
@@ -101,7 +97,7 @@ const Navbar: React.FC = () => {
           })}
           <button 
              onClick={() => scrollToSection('contact-form')}
-             className="mt-8 px-8 py-4 bg-white text-black text-sm font-bold"
+             className="mt-8 px-8 py-4 bg-timber-accent text-timber-black text-sm font-bold"
            >
              תיאום ייעוץ
            </button>

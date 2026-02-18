@@ -34,7 +34,7 @@ const BeforeAfter: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-black text-timber-black tracking-tight">
-            המהפך המושלם
+            תראו את ההבדל שיום עבודה אחד עושה
           </h2>
           <p className="text-gray-500 mt-4 font-light max-w-lg">
             גררו את הסמן כדי לראות את ההבדל בין רצפה ישנה לגימור של ג'ריקו.

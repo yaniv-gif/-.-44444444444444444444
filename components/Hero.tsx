@@ -13,7 +13,8 @@ const Hero: React.FC = () => {
       
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        {/* Increased opacity to 60% for better text readability */}
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
         
         <img 
           src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop" 
@@ -43,7 +44,7 @@ const Hero: React.FC = () => {
             שנראית כאילו<br/>
             תמיד הייתה כאן.
           </h1>
-          <p className="text-lg md:text-xl text-white/90 font-light mb-10 max-w-2xl leading-relaxed border-r-2 border-white/30 pr-6">
+          <p className="text-lg md:text-xl text-white/90 font-light mb-10 max-w-2xl leading-relaxed border-r-2 border-timber-accent pr-6">
             מתקין אחד שעושה הכל בעצמו — בלי צוותים מתחלפים ובלי הפתעות.<br/>
             מחיר סופי שנקבע מראש. 5 שנות אחריות על ההתקנה.
           </p>
@@ -53,7 +54,7 @@ const Hero: React.FC = () => {
               href="https://wa.me/972543962871"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-black hover:bg-gray-100 px-8 py-5 text-base font-bold transition-colors duration-300 min-w-[280px] flex items-center justify-center gap-3 group shadow-lg"
+              className="bg-timber-accent text-timber-black hover:bg-white px-8 py-5 text-base font-bold transition-colors duration-300 min-w-[280px] flex items-center justify-center gap-3 group shadow-lg shadow-timber-accent/20"
             >
               <Camera className="w-5 h-5" />
               שלחו לי תמונה של החלל בוואטסאפ

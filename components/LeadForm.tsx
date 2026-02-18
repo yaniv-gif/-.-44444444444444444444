@@ -45,8 +45,12 @@ const LeadForm: React.FC = () => {
         
         {/* Form Side */}
         <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center order-2 md:order-1">
-          <h2 className="text-4xl md:text-5xl font-black mb-4">בואו נדבר על הרצפה שלכם.</h2>
-          <p className="text-gray-400 font-light mb-12">השאירו פרטים ואחזור אליכם תוך מספר שעות (לא ימים).</p>
+          <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
+            קבלו הצעת מחיר סופית (בלי הפתעות) תוך שעה.
+          </h2>
+          <p className="text-gray-400 font-light mb-12">
+            השאירו פרטים ואחזור אליכם עם הצעה מדויקת. הטלפון שלכם שמור אצלי בלבד.
+          </p>
           
           {status === 'success' ? (
             <div className="bg-white/5 p-8 border border-white/10 text-center animate-fade-in">
@@ -66,11 +70,11 @@ const LeadForm: React.FC = () => {
                     name="name" 
                     required
                     placeholder=" "
-                    className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-white focus:ring-0 peer placeholder-transparent transition-colors"
+                    className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-timber-accent focus:ring-0 peer placeholder-transparent transition-colors"
                     value={formData.name}
                     onChange={handleChange}
                   />
-                  <label htmlFor="lead-name" className="absolute right-0 top-4 text-gray-500 text-sm font-bold uppercase tracking-wider duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[100%_0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-white pointer-events-none">
+                  <label htmlFor="lead-name" className="absolute right-0 top-4 text-gray-500 text-sm font-bold uppercase tracking-wider duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[100%_0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-timber-accent pointer-events-none">
                     שם מלא
                   </label>
                 </div>
@@ -83,11 +87,11 @@ const LeadForm: React.FC = () => {
                     required
                     dir="ltr"
                     placeholder=" "
-                    className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-white focus:ring-0 peer placeholder-transparent transition-colors text-right"
+                    className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-timber-accent focus:ring-0 peer placeholder-transparent transition-colors text-right"
                     value={formData.phone}
                     onChange={handleChange}
                   />
-                   <label htmlFor="lead-phone" className="absolute right-0 top-4 text-gray-500 text-sm font-bold uppercase tracking-wider duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[100%_0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-white pointer-events-none">
+                   <label htmlFor="lead-phone" className="absolute right-0 top-4 text-gray-500 text-sm font-bold uppercase tracking-wider duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[100%_0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-timber-accent pointer-events-none">
                     טלפון
                   </label>
                 </div>
@@ -100,11 +104,11 @@ const LeadForm: React.FC = () => {
                       name="city" 
                       required
                       placeholder=" "
-                      className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-white focus:ring-0 peer placeholder-transparent transition-colors"
+                      className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-timber-accent focus:ring-0 peer placeholder-transparent transition-colors"
                       value={formData.city}
                       onChange={handleChange}
                     />
-                     <label htmlFor="lead-city" className="absolute right-0 top-4 text-gray-500 text-sm font-bold uppercase tracking-wider duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[100%_0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-white pointer-events-none">
+                     <label htmlFor="lead-city" className="absolute right-0 top-4 text-gray-500 text-sm font-bold uppercase tracking-wider duration-300 transform -translate-y-6 scale-75 top-3 z-10 origin-[100%_0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-focus:text-timber-accent pointer-events-none">
                       עיר מגורים
                     </label>
                   </div>
@@ -113,7 +117,7 @@ const LeadForm: React.FC = () => {
                         <select 
                         id="lead-service"
                         name="serviceType"
-                        className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-white focus:ring-0 appearance-none rounded-none cursor-pointer"
+                        className="block w-full px-0 py-4 bg-transparent border-b border-gray-700 text-white focus:border-timber-accent focus:ring-0 appearance-none rounded-none cursor-pointer"
                         value={formData.serviceType}
                         onChange={handleChange}
                         >
@@ -136,7 +140,7 @@ const LeadForm: React.FC = () => {
               <button 
                 type="submit" 
                 disabled={status === 'submitting'}
-                className="w-full bg-white text-black hover:bg-gray-200 mt-8 py-5 text-sm font-black tracking-widest uppercase transition-colors duration-300 flex items-center justify-center gap-3"
+                className="w-full bg-timber-accent text-timber-black hover:bg-white mt-8 py-5 text-sm font-black tracking-widest uppercase transition-colors duration-300 flex items-center justify-center gap-3"
               >
                 {status === 'submitting' ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
