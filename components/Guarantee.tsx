@@ -1,65 +1,76 @@
 import React from 'react';
-import { Lock, User, CheckCircle2, Award } from 'lucide-react';
+import { ShieldCheck, UserCheck, Ruler } from 'lucide-react';
 
 const Guarantee: React.FC = () => {
-  const pillars = [
-    {
-      icon: <Lock className="w-8 h-8" />,
-      title: "מחיר סופי בהחלט",
-      desc: "בלי 'הפתעות' ובלי תוספות. הסכום שנסגר במדידה הוא הסכום הסופי לתשלום."
-    },
-    {
-      icon: <User className="w-8 h-8" />,
-      title: "רק אני אצלכם",
-      desc: "אין צוותים מתחלפים ואין קבלני משנה. אני מגיע, אני מודד, ואני מתקין."
-    },
-    {
-      icon: <CheckCircle2 className="w-8 h-8" />,
-      title: "אחריות מורחבת",
-      desc: "5 שנות אחריות מלאה על ההתקנה. אם משהו זז, חורק או מתרומם — אני חוזר."
-    }
-  ];
-
   return (
-    <section className="py-24 bg-[#121212] bg-noise text-white relative">
-      {/* Decorative Gold Line */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-timber-black via-timber-accent to-timber-black opacity-30"></div>
-
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-20 border-b border-gray-800 pb-10">
-           <div className="max-w-2xl">
-             <div className="flex items-center gap-3 mb-4">
-                <Award className="text-timber-accent w-6 h-6" />
-                <span className="text-timber-accent font-bold tracking-[0.2em] text-xs uppercase">The Gold Standard</span>
-             </div>
-             <h2 className="text-4xl md:text-6xl font-black leading-tight text-white">
-               לא עוד "שיפוצניק".<br/>
-               <span className="text-gray-500">אומן פרקט.</span>
-             </h2>
-           </div>
-           <p className="text-gray-400 max-w-md text-sm md:text-base mt-6 md:mt-0 font-light leading-relaxed border-r border-gray-800 pr-6">
-             בשוק הפרוץ של השיפוצים בישראל, אני מציע שקט נפשי. בלי איחורים, בלי לכלוך מיותר, ובלי אותיות קטנות.
-           </p>
+    <section className="py-24 bg-[#121212] text-white relative overflow-hidden">
+      {/* Background Noise & Gradient */}
+      <div className="absolute inset-0 opacity-5 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+      
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
+        
+        {/* Header */}
+        <div className="mb-16 border-l-4 border-timber-accent pl-8 py-2">
+          <h2 className="text-4xl md:text-6xl font-black text-white leading-none mb-4">
+            הסטנדרט שלי.
+          </h2>
+          <p className="text-gray-400 text-lg md:text-xl font-light max-w-2xl">
+            בשוק הפרוץ של השיפוצים, אני מציע משהו נדיר: <span className="text-white font-bold">ודאות.</span>
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {pillars.map((item, index) => (
-            <div key={index} className="flex flex-col items-start p-10 bg-[#1A1A1A]/80 backdrop-blur-sm border border-gray-800 hover:border-timber-accent/50 transition-all duration-500 group relative overflow-hidden">
-              {/* Gold Glow Effect on Hover */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-timber-accent/10 rounded-full blur-2xl transform translate-x-12 -translate-y-12 group-hover:bg-timber-accent/20 transition-colors"></div>
-
-              <div className="mb-6 text-timber-accent p-3 bg-timber-accent/10 rounded-lg group-hover:scale-110 transition-transform duration-500">
-                {item.icon}
-              </div>
-              <h3 className="text-xl md:text-2xl font-black mb-4 tracking-tight text-white group-hover:text-timber-accent transition-colors">
-                {item.title}
-              </h3>
-              <p className="text-gray-400 font-light leading-relaxed text-sm md:text-base">
-                {item.desc}
-              </p>
+        {/* The 3 Pillars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-gray-800">
+          
+          {/* Pillar 1 */}
+          <div className="group border-b md:border-b-0 md:border-l border-gray-800 p-10 hover:bg-white/5 transition-colors duration-500">
+            <div className="mb-6 flex justify-between items-start">
+              <Ruler className="w-10 h-10 text-timber-accent" />
+              <span className="text-gray-700 font-black text-5xl opacity-20 group-hover:opacity-40 transition-opacity">01</span>
             </div>
-          ))}
+            <h3 className="text-2xl font-bold mb-4 text-white">מחיר סופי בהחלט</h3>
+            <p className="text-gray-400 leading-relaxed text-sm">
+              הסכום שנסגר במדידה הוא הסכום הסופי. אין "הפתעות" ביום ההתקנה, אין תוספות על פנלים, ואין אותיות קטנות. מילה זו מילה.
+            </p>
+          </div>
+
+          {/* Pillar 2 */}
+          <div className="group border-b md:border-b-0 md:border-l border-gray-800 p-10 hover:bg-white/5 transition-colors duration-500">
+            <div className="mb-6 flex justify-between items-start">
+              <UserCheck className="w-10 h-10 text-timber-accent" />
+              <span className="text-gray-700 font-black text-5xl opacity-20 group-hover:opacity-40 transition-opacity">02</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-white">רק אני אצלכם</h3>
+            <p className="text-gray-400 leading-relaxed text-sm">
+              אני לא שולח "צוותים" ולא מעסיק קבלני משנה. אני מגיע למדידה, אני מבצע את ההתקנה, ואני מנקה אחריי. אתם יודעים בדיוק מי נכנס אליכם הביתה.
+            </p>
+          </div>
+
+          {/* Pillar 3 */}
+          <div className="group border-gray-800 p-10 hover:bg-white/5 transition-colors duration-500">
+            <div className="mb-6 flex justify-between items-start">
+              <ShieldCheck className="w-10 h-10 text-timber-accent" />
+              <span className="text-gray-700 font-black text-5xl opacity-20 group-hover:opacity-40 transition-opacity">03</span>
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-white">אחריות מורחבת</h3>
+            <p className="text-gray-400 leading-relaxed text-sm">
+              רוב השוק נותן שנה. אני נותן <span className="text-white font-bold">5 שנים</span>. אם פרקט זז, חורק או מתנפח – אני חוזר לתקן. בלי שאלות ובלי התחמקויות.
+            </p>
+          </div>
         </div>
+
+        {/* Signature Footer */}
+        <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-8 pt-10 border-t border-gray-800">
+          <div className="flex items-center gap-4">
+            <div className="h-px w-12 bg-timber-accent"></div>
+            <span className="uppercase tracking-[0.2em] text-xs text-timber-accent">Jericho Espinoza</span>
+          </div>
+           {/* SVG Signature simulation */}
+           <div className="font-handwriting text-4xl text-gray-500 opacity-50 font-serif italic">
+             Jericho.
+           </div>
+        </div>
+
       </div>
     </section>
   );

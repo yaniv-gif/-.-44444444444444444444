@@ -8,7 +8,6 @@ import Services from './components/Services';
 import BeforeAfter from './components/BeforeAfter';
 import Gallery from './components/Gallery';
 import Process from './components/Process';
-import Guarantee from './components/Guarantee';
 import Testimonials from './components/Testimonials';
 import Partners from './components/Partners';
 import LeadForm from './components/LeadForm';
@@ -55,7 +54,6 @@ const App: React.FC = () => {
         <div id="process">
           <Process />
         </div>
-        <Guarantee />
         <Testimonials />
         <LeadForm />
         <div id="faq">

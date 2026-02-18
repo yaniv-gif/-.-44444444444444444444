@@ -1,48 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Plus, Minus } from 'lucide-react';
 
 const FAQ: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   const faqs = [
     {
       q: "כמה עולה התקנת פרקט?",
-      a: "המחיר תלוי בסוג הפרקט וגודל החדר. שלחו תמונה בוואטסאפ ואתן הערכה מיידית."
+      a: "המחיר משתנה בהתאם לסוג הפרקט (למינציה/עץ/פולימרי) ולגודל החדר. הדרך הכי מהירה לקבל כיוון היא לשלוח לי תמונה בוואטסאפ, ואני אתן הערכה ראשונית מיד."
     },
     {
       q: "האם המחיר באמת סופי?",
-      a: "כן. אחרי המדידה בשטח המחיר ננעל. אין דרישות תשלום נוספות באמצע העבודה."
+      a: "כן, חד משמעית. אחרי שאני מודד את השטח ורואה את התשתית, המחיר ננעל. אין תוספות על פנלים, אין 'לא ראיתי', ואין הפתעות ביום ההתקנה."
     },
     {
-      q: "צריך לפנות ריהוט?",
-      a: "חפצים קטנים כן. ריהוט כבד (ספות/ארונות) אני יכול להזיז בתיאום מראש."
+      q: "צריך לפנות את הריהוט מהחדר?",
+      a: "חפצים קטנים, שטיחים ודברים שבירים — כן. ריהוט כבד (ספות, ארונות, מיטות) אני יכול להזיז בזהירות במהלך העבודה, בתיאום מראש."
     },
     {
       q: "אפשר להתקין על ריצוף קיים?",
-      a: "כן, אם הריצוף ישר. אם לא, אני מיישר אותו עם מדה מתפלסת לפני ההתקנה."
+      a: "ברוב המקרים כן, וזה חוסך המון לכלוך. התנאי הוא שהריצוף ישר. אם הריצוף עקום או שבור, אני מבצע יישור באמצעות 'מדה מתפלסת' לפני ההתקנה."
     },
     {
-      q: "מה האחריות?",
-      a: "5 שנים על העבודה. פי 5 מהמקובל בשוק."
+      q: "מה קורה אם הפרקט מתנפח אחרי שנה?",
+      a: "בדיוק בשביל זה יש לי 5 שנות אחריות. רוב המתקינים נותנים שנה. אני נותן שקט נפשי לטווח ארוך. אם משהו זז, חורק או מתנפח — אני מגיע לתקן."
     },
     {
-      q: "איפה אתה עובד?",
-      a: "בכל הארץ. מרכז, שרון, שפלה וצפון."
+      q: "באילו אזורים אתה עובד?",
+      a: "אני נותן שירות בכל הארץ, בדגש על אזור המרכז, השרון, השפלה ואזור חיפה והצפון."
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-6 md:px-12">
-        <h2 className="text-3xl font-black text-center mb-12">שאלות נפוצות</h2>
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6 md:px-12 max-w-4xl">
+        <h2 className="text-3xl md:text-4xl font-black text-center mb-12 text-timber-black">שאלות נפוצות</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+        <div className="space-y-4">
           {faqs.map((item, index) => (
-            <div key={index} className="flex flex-col">
-              <h3 className="text-lg font-bold text-timber-black mb-2 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-timber-accent rounded-full"></span>
-                {item.q}
-              </h3>
-              <p className="text-gray-500 font-light text-sm pr-4">
-                {item.a}
-              </p>
+            <div 
+              key={index} 
+              className={`bg-white rounded-xl overflow-hidden border transition-all duration-300 ${openIndex === index ? 'border-timber-accent shadow-lg' : 'border-gray-200 shadow-sm hover:border-gray-300'}`}
+            >
+              <button 
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full flex items-center justify-between p-6 text-right focus:outline-none"
+              >
+                <span className={`font-bold text-lg ${openIndex === index ? 'text-timber-black' : 'text-gray-700'}`}>
+                  {item.q}
+                </span>
+                <span className={`mr-4 p-1 rounded-full border transition-colors ${openIndex === index ? 'bg-timber-accent text-white border-timber-accent' : 'border-gray-200 text-gray-400'}`}>
+                  {openIndex === index ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                </span>
+              </button>
+              
+              <div 
+                className={`transition-[max-height,opacity] duration-300 ease-in-out overflow-hidden ${openIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
+              >
+                <div className="p-6 pt-0 text-gray-500 font-light leading-relaxed border-t border-dashed border-gray-100 mt-2">
+                  {item.a}
+                </div>
+              </div>
             </div>
           ))}
         </div>

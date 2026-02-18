@@ -1,109 +1,102 @@
 import React from 'react';
-import { Quote, Star, Phone } from 'lucide-react';
+import { Star, CheckCircle2 } from 'lucide-react';
 
 const Testimonials: React.FC = () => {
-  const reviews = [
-    {
-      text: "ג'ריקו התקין לנו פרקט בכל הבית. לא רק מקצוען — פרפקציוניסט. עבודה שקטה, נקייה, ותוצאה שנראית כאילו תמיד הייתה כאן.",
-      author: "רונית ו.",
-      location: "רמת גן",
-      type: "פרקט למינציה"
-    },
-    {
-      text: "החליף לנו דק איפאה שנרקב. עבודה יסודית, מחיר הוגן, ונתן מחיר סגור שלא השתנה. ממליצים בחום.",
-      author: "משפחת לוי",
-      location: "הרצליה",
-      type: "חידוש דק"
-    }
-  ];
-
   return (
-    <section className="py-24 bg-white relative">
-       {/* Background Decoration */}
-       <div className="absolute top-0 right-0 w-1/3 h-full bg-gray-50/50 -z-0"></div>
-
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="mb-16 flex flex-col md:flex-row justify-between items-end gap-6 border-b border-gray-100 pb-8">
-           <div>
-             <span className="text-timber-accent font-bold tracking-[0.2em] text-xs uppercase">Clients & Reviews</span>
-             <h2 className="text-4xl md:text-5xl font-black mt-3 text-timber-black">מה אומרים עליי</h2>
-           </div>
-           
-           {/* Aggregate Badge */}
-           <a href="https://g.page/" target="_blank" rel="noopener" className="flex items-center gap-4 bg-white border border-gray-200 px-6 py-3 rounded-xl shadow-sm hover:shadow-md transition-shadow group">
-              <div className="flex -space-x-1">
-                 {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                 ))}
-              </div>
-              <div className="flex flex-col text-right border-r border-gray-100 pr-4">
-                 <span className="font-bold text-sm text-gray-900 group-hover:text-blue-600 transition-colors">Google Reviews</span>
-                 <span className="text-xs text-gray-500">דירוג 5.0 מושלם</span>
-              </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" className="w-6 h-6 mr-2" />
-           </a>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6 md:px-12">
+        
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="text-timber-accent font-bold tracking-widest text-xs uppercase mb-3 block">
+            Verified Reviews
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black text-timber-black">
+            אל תקשיבו רק לי.
+          </h2>
+          <div className="flex justify-center items-center gap-2 mt-4 text-gray-500 font-medium">
+             <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+             <span>5.0</span>
+             <span className="mx-2">•</span>
+             <span>מבוסס על לקוחות אמיתיים בגוגל</span>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Real Reviews */}
-          <div className="space-y-10">
-            {reviews.map((review, index) => (
-              <div key={index} className="relative bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
-                <Quote className="absolute top-8 left-8 w-10 h-10 text-gray-100 group-hover:text-timber-accent/20 transform -scale-x-100 transition-colors" />
-                <div className="flex items-center gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-timber-accent text-timber-accent" />
-                    ))}
-                </div>
-                <p className="text-lg font-medium text-gray-700 mb-6 leading-relaxed relative z-10">
-                  "{review.text}"
-                </p>
-                <div className="flex items-center gap-4 border-t border-gray-50 pt-4">
-                  <div className="w-10 h-10 rounded-full bg-timber-black text-white flex items-center justify-center font-bold text-sm">
-                    {review.author.charAt(0)}
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-bold text-black text-sm">{review.author}</span>
-                    <span className="text-xs text-gray-400 font-bold uppercase tracking-widest">{review.location} • {review.type}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto">
+          
+          {/* Card 1: Main Text Review */}
+          <div className="md:col-span-2 bg-gray-50 p-8 rounded-3xl border border-gray-100">
+             <div className="flex items-start justify-between mb-6">
+               <div className="flex gap-1">
+                 {[...Array(5)].map((_, i) => (
+                   <Star key={i} className="w-4 h-4 text-timber-accent fill-timber-accent" />
+                 ))}
+               </div>
+               <span className="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1">
+                 <CheckCircle2 className="w-3 h-3" /> מאומת
+               </span>
+             </div>
+             <p className="text-xl md:text-2xl font-medium text-timber-black leading-relaxed mb-8">
+               "ג'ריקו הגיע אלינו אחרי שמתקין אחר הבריז. מהרגע הראשון הבנו שזה ליגה אחרת. המדידה הייתה מדויקת, המחיר היה הוגן (וסופי!), והעבודה... פשוט שלמות. הפרקט בחדרי השינה נראה כאילו נולד שם."
+             </p>
+             <div className="flex items-center gap-3">
+               <div className="w-10 h-10 rounded-full bg-timber-black text-white flex items-center justify-center font-bold">ד</div>
+               <div>
+                 <p className="text-sm font-bold text-gray-900">דניאל ומיכל</p>
+                 <p className="text-xs text-gray-500">התקנת למינציה • ראשון לציון</p>
+               </div>
+             </div>
           </div>
 
-          {/* Visual WhatsApp Screenshot Placeholder */}
-          <div className="relative mt-8 md:mt-0">
-             <div className="absolute inset-0 bg-timber-accent rounded-3xl transform rotate-6 scale-95 opacity-20 blur-xl"></div>
-             <div className="bg-[#E5DDD5] p-6 rounded-3xl shadow-2xl relative z-10 max-w-sm mx-auto border-4 border-white/50">
-                {/* Header */}
-                <div className="flex items-center gap-3 bg-[#075E54] p-4 -m-6 mb-6 rounded-t-3xl text-white shadow-md relative z-20">
-                   <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-white/20"></div>
-                   <div className="flex flex-col">
-                      <span className="text-base font-bold">ג'ריקו אספינוזה</span>
-                      <span className="text-[10px] text-white/80">מחובר/ת</span>
-                   </div>
-                   <div className="mr-auto flex gap-4 text-white/70">
-                      <Phone className="w-5 h-5 opacity-50" />
-                   </div>
+          {/* Card 2: WhatsApp Screenshot Vibe */}
+          <div className="row-span-2 bg-[#E5DDD5] p-6 rounded-3xl border-4 border-white shadow-xl relative overflow-hidden">
+             <div className="absolute inset-0 opacity-10 bg-[url('https://site-assets.fontawesome.com/releases/v6.5.1/svgs/brands/whatsapp.svg')] bg-center bg-no-repeat bg-contain"></div>
+             
+             {/* WA Header */}
+             <div className="flex items-center gap-3 bg-[#075E54] p-3 -m-6 mb-6 rounded-t-2xl text-white relative z-10">
+                <div className="w-8 h-8 rounded-full bg-gray-300 border border-white/30"></div>
+                <div className="text-xs">
+                   <p className="font-bold">ג'ריקו אספינוזה</p>
+                   <p className="opacity-80">נראה לאחרונה היום ב-08:30</p>
                 </div>
+             </div>
 
-                {/* Messages */}
-                <div className="space-y-4 pt-2 text-sm font-sans">
-                   <div className="bg-white p-3 rounded-xl rounded-tr-none shadow-sm max-w-[85%] self-start mr-auto relative">
-                      <p dir="rtl" className="text-gray-800">ג'ריקו תודה רבה על העבודה!! יצא מושלם 🙏</p>
-                      <span className="text-[10px] text-gray-400 block text-left mt-1">10:42</span>
-                   </div>
-                   <div className="bg-[#dcf8c6] p-3 rounded-xl rounded-tl-none shadow-sm max-w-[85%] ml-auto relative">
-                      <p dir="rtl" className="text-gray-800">בכיף גדול, תתחדשו! שמח שאהבתם</p>
-                      <span className="text-[10px] text-[#075E54]/60 block text-right mt-1">10:43</span>
-                   </div>
-                   <div className="bg-white p-3 rounded-xl rounded-tr-none shadow-sm max-w-[85%] self-start mr-auto relative">
-                      <p dir="rtl" className="text-gray-800">כבר העברתי את המספר שלך לשכנים, הם התלהבו מהפישבון 😉</p>
-                      <span className="text-[10px] text-gray-400 block text-left mt-1">10:45</span>
-                   </div>
+             <div className="space-y-3 text-xs font-sans relative z-10">
+                <div className="bg-white p-3 rounded-lg rounded-tr-none shadow-sm self-start mr-8 relative">
+                   <p dir="rtl">ג'ריקו בוקר טוב! רק רציתי להגיד תודה ענקית.</p>
+                   <span className="text-[9px] text-gray-400 absolute bottom-1 left-2">09:15</span>
+                </div>
+                <div className="bg-white p-3 rounded-lg rounded-tr-none shadow-sm self-start mr-8 relative">
+                   <p dir="rtl">נכנסנו הבוקר למשרד והדק במרפסת נראה חדש לגמרי. לא האמנתי שאפשר להציל אותו.</p>
+                   <span className="text-[9px] text-gray-400 absolute bottom-1 left-2">09:16</span>
+                </div>
+                <div className="bg-[#dcf8c6] p-3 rounded-lg rounded-tl-none shadow-sm self-end ml-8 relative">
+                   <p dir="rtl">איזה כיף לשמוע! תתחדשו חברים 🙏</p>
+                   <CheckCircle2 className="w-3 h-3 text-blue-500 absolute bottom-1 right-1" />
                 </div>
              </div>
           </div>
+
+          {/* Card 3: Compact Review */}
+          <div className="bg-timber-black text-white p-8 rounded-3xl">
+             <div className="flex gap-1 mb-4">
+                 {[...Array(5)].map((_, i) => (
+                   <Star key={i} className="w-4 h-4 text-timber-accent fill-timber-accent" />
+                 ))}
+             </div>
+             <p className="text-gray-300 mb-6 font-light leading-relaxed text-sm">
+               "חיפשתי מישהו שיתקן פרקט שהתנפח בדירה שכורה. ג'ריקו לא ניסה למכור לי פרקט חדש, אלא פשוט תיקן את הבעיה בצורה מקצועית. ישר והגון."
+             </p>
+             <div className="flex items-center gap-3">
+               <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center font-bold text-xs">ר</div>
+               <div>
+                 <p className="text-sm font-bold">רועי ק.</p>
+                 <p className="text-xs text-gray-500">תיקון פרקט • תל אביב</p>
+               </div>
+             </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -1,62 +1,69 @@
 import React from 'react';
+import { Instagram } from 'lucide-react';
 
 const Gallery: React.FC = () => {
   const projects = [
     {
       title: "פישבון אלון מעושן",
-      desc: "הדבקה מלאה, 45 מ\"ר (רמת גן)",
+      desc: "רמת גן",
       image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2669&auto=format&fit=crop",
-      size: "col-span-1 md:col-span-2 row-span-2",
-      alt: "התקנת פרקט פישבון אלון מעושן רמת גן ג'ריקו אספינוזה"
+      size: "md:col-span-2 md:row-span-2",
     },
     {
       title: "חידוש דק איפאה",
-      desc: "ליטוש ושימון אחרי נזקי חורף (הרצליה)",
+      desc: "הרצליה",
       image: "https://images.unsplash.com/photo-1621252179027-94459d27d3ee?q=80&w=2670&auto=format&fit=crop",
-      size: "col-span-1 row-span-1",
-      alt: "חידוש דק איפאה מרפסת גג הרצליה"
+      size: "md:col-span-1 md:row-span-1",
     },
     {
-      title: "מתיחת שטיח אמריקאית",
-      desc: "משרד עורכי דין, כולל מדרגות (פתח תקווה)",
+      title: "שטיח מקיר לקיר",
+      desc: "פתח תקווה",
       image: "https://images.unsplash.com/photo-1574873215043-44119961dc42?q=80&w=2574&auto=format&fit=crop",
-      size: "col-span-1 row-span-1",
-      alt: "מתיחת שטיח מקיר לקיר שיטה אמריקאית פתח תקווה"
+      size: "md:col-span-1 md:row-span-1",
     },
     {
       title: "תלת-שכבתי מודבק",
-      desc: "דירה שלמה, 90 מ\"ר (תל אביב)",
+      desc: "תל אביב",
       image: "https://images.unsplash.com/photo-1581850518616-bcb8077a2536?q=80&w=800&auto=format&fit=crop",
-      size: "col-span-1 md:col-span-2 row-span-1",
-      alt: "התקנת פרקט תלת שכבתי מודבק תל אביב"
+      size: "md:col-span-2 md:row-span-1",
     }
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-white">
+    <section id="gallery" className="py-24 bg-[#1A1A1A] text-white">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col items-center text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-timber-black tracking-tight">
-            פרויקטים נבחרים
-          </h2>
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div>
+             <span className="text-gray-500 font-bold tracking-[0.2em] text-xs uppercase mb-2 block">Portfolio</span>
+             <h2 className="text-4xl font-black tracking-tight">פרויקטים נבחרים</h2>
+          </div>
+          <a 
+            href="https://instagram.com" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-timber-accent transition-colors"
+          >
+            <Instagram className="w-4 h-4" />
+            עקבו באינסטגרם
+          </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[600px]">
           {projects.map((project, index) => (
-            <div key={index} className={`relative group overflow-hidden bg-gray-100 ${project.size}`}>
+            <div key={index} className={`relative group overflow-hidden rounded-xl bg-gray-900 ${project.size}`}>
               {/* Image */}
               <img 
                 src={project.image} 
-                alt={project.alt} 
-                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                alt={project.title} 
+                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 opacity-80 group-hover:opacity-100"
               />
               
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col items-center justify-center text-center p-6">
-                <h3 className="text-white text-2xl font-black tracking-wide mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+              {/* Overlay Content */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <h3 className="text-white text-xl font-bold translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 font-light text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                <p className="text-timber-accent text-xs font-bold uppercase tracking-wider translate-y-2 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                   {project.desc}
                 </p>
               </div>
@@ -64,12 +71,9 @@ const Gallery: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-            <a 
-              href="https://wa.me/972543962871"
-              className="inline-block border-b-2 border-black pb-1 text-sm font-bold hover:text-timber-accent hover:border-timber-accent transition-colors"
-            >
-              צפה בעבודות נוספות באינסטגרם
+        <div className="md:hidden text-center mt-8">
+            <a href="https://instagram.com" className="text-sm font-bold text-gray-400 border-b border-gray-600 pb-1">
+              לעוד עבודות באינסטגרם
             </a>
         </div>
       </div>
