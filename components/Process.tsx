@@ -1,5 +1,5 @@
 import React from 'react';
-import { Send, Ruler, Hammer, ShieldCheck, ArrowLeft } from 'lucide-react';
+import { Send, Ruler, Hammer, ShieldCheck, ArrowRight } from 'lucide-react';
 
 const Process: React.FC = () => {
   const steps = [
@@ -50,7 +50,7 @@ const Process: React.FC = () => {
               className="inline-flex items-center gap-2 text-sm font-bold border-b-2 border-timber-black pb-1 hover:text-timber-accent hover:border-timber-accent transition-colors"
             >
               דלג לשלב 1: שלח הודעה
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>

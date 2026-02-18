@@ -37,14 +37,14 @@ const Gallery: React.FC = () => {
              <span className="text-gray-500 font-bold tracking-[0.2em] text-xs uppercase mb-2 block">עבודות אמיתיות</span>
              <h2 className="text-4xl font-black tracking-tight">פרויקטים נבחרים</h2>
           </div>
+          {/* Link updated to be a placeholder or specific account when available */}
           <a 
-            href="https://instagram.com" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-timber-accent transition-colors"
+            href="#" 
+            onClick={(e) => e.preventDefault()}
+            className="hidden md:flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-timber-accent transition-colors cursor-not-allowed opacity-50"
           >
             <Instagram className="w-4 h-4" />
-            עקבו באינסטגרם
+            בקרוב: עקבו באינסטגרם
           </a>
         </div>
 
@@ -69,12 +69,6 @@ const Gallery: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="md:hidden text-center mt-8">
-            <a href="https://instagram.com" className="text-sm font-bold text-gray-400 border-b border-gray-600 pb-1">
-              לעוד עבודות באינסטגרם
-            </a>
         </div>
       </div>
     </section>

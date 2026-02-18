@@ -68,7 +68,7 @@ const BeforeAfter: React.FC = () => {
             draggable="false"
           />
           <div className="absolute top-6 left-6 bg-black/80 text-white/70 px-4 py-2 text-xs font-bold tracking-widest uppercase rounded-md backdrop-blur-md">
-            לפני (Before)
+            לפני: ריצוף ישן וסדוק
           </div>
 
           {/* After Image */}
@@ -83,7 +83,7 @@ const BeforeAfter: React.FC = () => {
               draggable="false"
             />
             <div className="absolute top-6 right-6 bg-timber-accent text-timber-black px-4 py-2 text-xs font-black tracking-widest uppercase rounded-md shadow-lg">
-              אחרי (After)
+              אחרי: פרקט פישבון אלון
             </div>
           </div>
 

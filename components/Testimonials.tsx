@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, CheckCircle2 } from 'lucide-react';
+import { Star, CheckCircle2, ArrowUpRight } from 'lucide-react';
 
 const Testimonials: React.FC = () => {
   return (
@@ -20,6 +20,9 @@ const Testimonials: React.FC = () => {
              <span className="mx-2">•</span>
              <span>מבוסס על לקוחות אמיתיים בגוגל</span>
           </div>
+          <a href="#" className="text-xs text-timber-accent font-bold mt-2 inline-flex items-center gap-1 hover:underline">
+             קראו את כל הביקורות בגוגל <ArrowUpRight className="w-3 h-3" />
+          </a>
         </div>
 
         {/* Bento Grid Layout */}
@@ -43,7 +46,7 @@ const Testimonials: React.FC = () => {
              <div className="flex items-center gap-3">
                <div className="w-10 h-10 rounded-full bg-timber-black text-white flex items-center justify-center font-bold">ד</div>
                <div>
-                 <p className="text-sm font-bold text-gray-900">דניאל ומיכל</p>
+                 <p className="text-sm font-bold text-gray-900">דניאל ל.</p>
                  <p className="text-xs text-gray-500">התקנת למינציה • ראשון לציון</p>
                </div>
              </div>
@@ -89,7 +92,7 @@ const Testimonials: React.FC = () => {
              <div className="flex items-center gap-3">
                <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center font-bold text-xs">ר</div>
                <div>
-                 <p className="text-sm font-bold">רועי ק.</p>
+                 <p className="text-sm font-bold">רועי כ.</p>
                  <p className="text-xs text-gray-500">תיקון פרקט • תל אביב</p>
                </div>
              </div>

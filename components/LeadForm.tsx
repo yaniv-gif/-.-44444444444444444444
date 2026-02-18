@@ -42,16 +42,26 @@ const LeadForm: React.FC = () => {
   };
 
   return (
-    <section id="contact-form" className="bg-timber-black text-white">
+    <section id="contact-form" className="bg-timber-black text-white relative">
       <div className="flex flex-col md:flex-row min-h-[800px]">
         
         {/* Form Side */}
         <div className="w-full md:w-1/2 p-12 md:p-24 flex flex-col justify-center order-2 md:order-1">
-          <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
-            הצעת מחיר סופית (בלי הפתעות) — אחרי תמונה ומדידה.
-          </h2>
+          
+          <div className="mb-8">
+            <span className="inline-block bg-white/10 px-3 py-1 rounded text-xs font-bold text-timber-accent mb-4 border border-white/10">
+              זמינות: עד 4 פרויקטים בחודש
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
+              כמה זה יעלה?
+            </h2>
+            <h3 className="text-xl md:text-2xl text-gray-300 font-bold mb-4">
+              תוך 24 שעות, אחרי תמונה — תקבלו מחיר סופי שלא יזוז.
+            </h3>
+          </div>
+
           <p className="text-gray-400 font-light mb-12">
-            השאירו פרטים ואפתח לכם חלון וואטסאפ עם הודעה מוכנה. לאחר השליחה, אחזור אליכם באותו יום עסקים.
+            השאירו פרטים ואפתח לכם חלון וואטסאפ עם הודעה מוכנה.
           </p>
           
           {status === 'success' ? (
@@ -64,9 +74,15 @@ const LeadForm: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2 text-white">ההודעה מוכנה לשליחה</h3>
               <p className="text-gray-300 font-light mb-6">
-                חלון הוואטסאפ נפתח אצלכם. <br/>
-                <strong className="text-white font-bold">אנא לחצו על כפתור ה'שליחה' (Send) בוואטסאפ</strong> כדי שאקבל את הפרטים.
+                חלון הוואטסאפ נפתח אצלכם.
               </p>
+              
+              <div className="bg-[#25D366]/20 border border-[#25D366] rounded-lg p-4 mb-6">
+                <p className="text-[#25D366] font-black text-center text-lg">
+                  👆 לחצו "שלח" בחלון הוואטסאפ שנפתח
+                </p>
+              </div>
+
               <button onClick={() => setStatus('idle')} className="text-sm font-bold text-gray-400 hover:text-white underline">
                 שלחתי, חזרה לאתר
               </button>

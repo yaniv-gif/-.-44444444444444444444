@@ -10,6 +10,11 @@
     <meta property="og:title" content="ג'ריקו אספינוזה | מתקין פרקט – מחיר סופי מראש" />
     <meta property="og:description" content="מתקין אחד שעושה הכל בעצמו. פרקט, שטיחים, דקים. 5 שנות אחריות על העבודה." />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop" />
 
     <!-- Google Fonts: Heebo (Architectural look) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,9 +53,13 @@
         background-color: #FFFFFF;
         color: #121212;
       }
-      /* Remove standard focus rings for cleaner aesthetic */
-      *:focus {
-        outline: none !important;
+      /* Accessibility: Restore focus rings selectively */
+      *:focus:not(:focus-visible) {
+        outline: none;
+      }
+      *:focus-visible {
+        outline: 2px solid #C6A87C;
+        outline-offset: 2px;
       }
       ::selection {
         background-color: #121212;
@@ -82,8 +91,16 @@
       "telephone": "054-396-2871",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "IL"
+        "addressCountry": "IL",
+        "addressRegion": "מרכז",
+        "addressLocality": "גוש דן"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "32.0853",
+        "longitude": "34.7818"
+      },
+      "openingHours": "Mo-Fr 08:00-18:00",
       "areaServed": "Israel",
       "priceRange": "$$",
       "description": "התקנת פרקט, שטיחים ודקים עם דיוק פיליפיני. שירות בכל הארץ."

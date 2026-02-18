@@ -42,8 +42,9 @@ const StickyCTA: React.FC = () => {
           href="https://wa.me/972543962871"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[70%] bg-[#25D366] text-white flex items-center justify-center gap-2 font-bold text-lg"
+          className="w-[70%] bg-[#25D366] text-white flex items-center justify-center gap-2 font-bold text-lg relative"
         >
+          <span className="w-2 h-2 rounded-full bg-white animate-ping absolute top-4 right-4 opacity-75"></span>
           <MessageCircle className="w-5 h-5 fill-current" />
           ייעוץ בוואטסאפ
         </a>

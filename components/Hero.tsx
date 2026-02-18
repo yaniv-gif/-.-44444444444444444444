@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Camera, Phone } from 'lucide-react';
+import { MessageCircle, Phone } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
               rel="noopener noreferrer"
               className="bg-timber-accent text-timber-black hover:bg-white px-8 py-5 text-base font-bold transition-colors duration-300 min-w-[280px] flex items-center justify-center gap-3 group shadow-lg shadow-timber-accent/20"
             >
-              <Camera className="w-5 h-5" />
+              <MessageCircle className="w-5 h-5 fill-current text-[#25D366]" />
               שלחו לי תמונה של החלל בוואטסאפ
             </a>
             <a 

@@ -82,7 +82,8 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-timber-black text-white z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-500 md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      {/* Fixed: Use -translate-x-full to slide from correct side in RTL */}
+      <div className={`fixed inset-0 bg-timber-black text-white z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-500 md:hidden ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
          {['השירותים', 'תהליך', 'פרויקטים', 'שאלות נפוצות'].map((item, idx) => {
              const map: {[key:string]: string} = { 'השירותים': 'services', 'תהליך': 'process', 'פרויקטים': 'gallery', 'שאלות נפוצות': 'faq' };
              return (

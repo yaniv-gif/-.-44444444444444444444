@@ -3,9 +3,9 @@ import React from 'react';
 const TrustBar: React.FC = () => {
   const stats = [
     { value: "5.0", label: "בגוגל (ביקורות מאומתות)" },
-    { value: "10+", label: "שנות ניסיון בשטח" },
+    { value: "10+", label: "שנות התמחות בפרקטים מורכבים" },
     { value: "5", label: "שנות אחריות בכתב" },
-    { value: "500+", label: "פרויקטים שהושלמו" },
+    { value: "0", label: "קבלני משנה בפרויקטים שלי" },
   ];
 
   return (
