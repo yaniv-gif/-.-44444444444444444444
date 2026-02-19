@@ -6,26 +6,26 @@ const Process: React.FC = () => {
     {
       num: "01",
       icon: <Send className="w-6 h-6 text-white" />,
-      title: "הצעת מחיר מהירה",
-      desc: "שולחים תמונה של החדר בוואטסאפ, ומקבלים הערכת מחיר ראשונית. בלי ביקורים מיותרים."
+      title: "בדיקת התשתית והמדידות",
+      desc: "שולחים תמונה קצרה בוואטסאפ, ומקבלים הערכה ראשונית. אחר כך תיאום בדיקה/מדידה בשטח."
     },
     {
       num: "02",
       icon: <Ruler className="w-6 h-6 text-white" />,
-      title: "מדידה ונעילת מחיר",
-      desc: "אני מגיע למדוד את השטח. המחיר שנקבע כאן הוא סופי. אין תוספות, אין 'לא ראיתי'."
+      title: "הצעה מסודרת",
+      desc: "לאחר בדיקת השטח — הצעה מפורטת שמבהירה בדיוק מה כלול, מה לא כלול ומה צפוי."
     },
     {
       num: "03",
       icon: <Hammer className="w-6 h-6 text-white" />,
-      title: "ההתקנה",
-      desc: "אני מגיע בזמן (על הדקה). עבודה נקייה, שקטה, עם ציוד מקצועי ששואב את האבק."
+      title: "ביצוע לפי סוג המשטח",
+      desc: "עבודה לפי סוג המשטח והחומרים — הדבקה, התקנה צפה, מתיחה או תיקון, לפי מה שנכון."
     },
     {
       num: "04",
       icon: <ShieldCheck className="w-6 h-6 text-white" />,
-      title: "מסירת מפתח",
-      desc: "בודקים יחד כל פינה. רק כשאתם מחייכים, אני מוסר תעודת אחריות ל-5 שנים."
+      title: "סיום נקי ובדיקה",
+      desc: "סיום נקי ובדיקה מולכם בסוף — לוודא שהכל כפי שסוכם לפני שמסיימים."
     }
   ];
 
@@ -40,8 +40,8 @@ const Process: React.FC = () => {
               איך זה עובד
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-timber-black leading-tight">
-              שקט נפשי.<br/>
-              ב-4 שלבים פשוטים.
+              בדיקה → הצעה → ביצוע → סיום.<br/>
+              ברור מהתחלה.
             </h2>
           </div>
           <div className="hidden md:block">
@@ -49,7 +49,7 @@ const Process: React.FC = () => {
               href="https://wa.me/972543962871"
               className="inline-flex items-center gap-2 text-sm font-bold border-b-2 border-timber-black pb-1 hover:text-timber-accent hover:border-timber-accent transition-colors"
             >
-              דלג לשלב 1: שלח הודעה
+              שלחו תמונה + מיקום בוואטסאפ
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
