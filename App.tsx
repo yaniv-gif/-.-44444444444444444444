@@ -15,6 +15,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 import InterruptCTA from './components/InterruptCTA';
+import Guarantee from './components/Guarantee';
 
 const App: React.FC = () => {
   // Global Scroll Reveal Observer
@@ -57,6 +58,7 @@ const App: React.FC = () => {
           <Process />
         </div>
         <Testimonials />
+        <Guarantee />
         <LeadForm />
         <div id="faq">
           <FAQ />
