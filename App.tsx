@@ -16,6 +16,7 @@ import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 import InterruptCTA from './components/InterruptCTA';
 import Guarantee from './components/Guarantee';
+import ObjectionBlock from './components/ObjectionBlock';
 
 const App: React.FC = () => {
   // Global Scroll Reveal Observer
@@ -50,6 +51,7 @@ const App: React.FC = () => {
           <Services />
         </div>
         <ProblemSolution />
+        <ObjectionBlock />
         <BeforeAfter />
         <Gallery />
         <InterruptCTA />
