@@ -52,9 +52,8 @@ const Hero: React.FC = () => {
 
           {/* Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tight mb-6 text-white">
-            התקנת פרקט ותיקוני פרקט<br/>
-            שטיחים מקיר לקיר<br/>
-            וחידוש דקים.
+            התקנת פרקטים<br/>
+            ושטיחים מקיר לקיר.
           </h1>
 
           {/* Subtext — leading-loose gives Hebrew text the air it needs */}
