@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content — vertically centered, shifted slightly down for visual weight */}
-      <div className="relative z-20 container mx-auto px-6 md:px-12 flex flex-col items-end text-right w-full mt-16 md:mt-24">
+      <div className="relative z-20 container mx-auto px-6 md:px-12 flex flex-col text-right w-full mt-16 md:mt-24">
 
         <div className={`max-w-4xl w-full transition-all duration-1000 transform ${loaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
 
