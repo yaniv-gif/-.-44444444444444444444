@@ -9,6 +9,7 @@ const ProblemSolution: React.FC = () => {
         <div className="relative h-[50vh] md:h-auto overflow-hidden order-1 md:order-2">
           <img 
             src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?q=80&w=2670&auto=format&fit=crop" 
+            loading="lazy"
             alt="ג'ריקו אספינוזה בודק פרקט בהתקנה" 
             className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out"
           />

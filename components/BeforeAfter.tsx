@@ -63,6 +63,7 @@ const BeforeAfter: React.FC = () => {
           {/* Before Image */}
           <img 
             src={beforeImage} 
+            loading="lazy"
             alt="לפני" 
             className="absolute top-0 left-0 w-full h-full object-cover grayscale brightness-50"
             draggable="false"
@@ -78,6 +79,7 @@ const BeforeAfter: React.FC = () => {
           >
             <img 
               src={afterImage} 
+              loading="lazy"
               alt="אחרי" 
               className="absolute top-0 left-0 w-full h-full object-cover"
               draggable="false"

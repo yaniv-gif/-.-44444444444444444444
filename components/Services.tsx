@@ -63,6 +63,7 @@ const Services: React.FC = () => {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10 duration-500"></div>
                   <img 
                     src={service.image} 
+                    loading="lazy"
                     alt={service.title} 
                     className="w-full h-full object-cover transition duration-700 ease-out group-hover:scale-105"
                   />
