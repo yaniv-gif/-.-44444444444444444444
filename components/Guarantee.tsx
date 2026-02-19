@@ -10,7 +10,7 @@ const Guarantee: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header */}
-        <div className="mb-16 border-l-4 border-timber-accent pl-8 py-2">
+        <div className="mb-16 border-r-4 border-timber-accent pr-8 py-2">
           <h2 className="text-4xl md:text-6xl font-black text-white leading-none mb-4">
             הסטנדרט שלי.
           </h2>
@@ -23,7 +23,7 @@ const Guarantee: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 border-t border-gray-800">
           
           {/* Pillar 1 */}
-          <div className="group border-b md:border-b-0 md:border-l border-gray-800 p-10 hover:bg-white/5 transition-colors duration-500">
+          <div className="group border-b md:border-b-0 md:border-r border-gray-800 p-10 hover:bg-white/5 transition-colors duration-500">
             <div className="mb-6 flex justify-between items-start">
               <Ruler className="w-10 h-10 text-timber-accent" />
               <span className="text-gray-700 font-black text-5xl opacity-20 group-hover:opacity-40 transition-opacity">01</span>
@@ -35,7 +35,7 @@ const Guarantee: React.FC = () => {
           </div>
 
           {/* Pillar 2 */}
-          <div className="group border-b md:border-b-0 md:border-l border-gray-800 p-10 hover:bg-white/5 transition-colors duration-500">
+          <div className="group border-b md:border-b-0 md:border-r border-gray-800 p-10 hover:bg-white/5 transition-colors duration-500">
             <div className="mb-6 flex justify-between items-start">
               <UserCheck className="w-10 h-10 text-timber-accent" />
               <span className="text-gray-700 font-black text-5xl opacity-20 group-hover:opacity-40 transition-opacity">02</span>
@@ -66,7 +66,7 @@ const Guarantee: React.FC = () => {
             <span className="uppercase tracking-[0.2em] text-xs text-timber-accent">Jericho Espinoza</span>
           </div>
            {/* SVG Signature simulation */}
-           <div className="font-handwriting text-4xl text-gray-500 opacity-50 font-serif italic">
+           <div className="text-4xl text-gray-500 opacity-50 font-serif italic">
              Jericho.
            </div>
         </div>
