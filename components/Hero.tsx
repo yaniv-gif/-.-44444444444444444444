@@ -81,6 +81,23 @@ const Hero: React.FC = () => {
               תיאום בדיקה/מדידה
             </a>
           </div>
+
+          {/* Micro-trust row */}
+          <div className="flex flex-wrap gap-x-6 gap-y-2 mt-6 text-white/60 text-xs font-medium">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-timber-accent inline-block"></span>
+              התאמה למצב התשתית
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-timber-accent inline-block"></span>
+              עבודה מדויקת ונקייה
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-timber-accent inline-block"></span>
+              פתרון מלא מהכנה עד גימור
+            </span>
+          </div>
+
         </div>
       </div>
     </section>
